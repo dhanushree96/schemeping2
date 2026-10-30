@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0F172A;
+  --color-secondary: #10B981;
+  --color-accent: #3B82F6;
+  --bg-gradient-blue-emerald: linear-gradient(to right, #3B82F6, #10B981);
+}
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --bg-main: #FFFFFF;
+  --bg-neutral: #F3F4F6;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: #1F2937;
+  overflow-x: hidden;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom button styles to match the premium feel */
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 rounded-xl font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white px-6 py-3 rounded-xl font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-secondary/20;
+}
+
+.card-premium {
+  @apply bg-white rounded-2xl p-6 shadow-xl shadow-slate-200/50 border border-slate-100 transition-all hover:shadow-2xl hover:-translate-y-1;
+}
+
+.dark .card-premium {
+  @apply bg-slate-900 border-slate-800 shadow-none;
+}
